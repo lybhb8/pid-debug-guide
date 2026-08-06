@@ -1,0 +1,58 @@
+site_name: PID工程调试指南
+site_description: PID 工程调试指南（西门子应用示例）
+site_author: lybhb8
+site_url: https://lybhb8.github.io/pid-debug-guide/
+repo_url: https://github.com/lybhb8/pid-debug-guide
+repo_name: pid-debug-guide
+edit_uri: ""
+
+theme:
+  name: material
+  language: zh
+  features:
+    - navigation.top
+    - navigation.indexes
+    - navigation.sections
+    - navigation.tracking
+    - toc.follow
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: 切换到深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch
+        name: 切换到浅色模式
+  icon:
+    logo: material/alpha-p-box
+
+plugins:
+  - search:
+      separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.tasklist:
+      custom_checkbox: true
