@@ -36,6 +36,10 @@ theme:
   icon:
     logo: material/alpha-p-box
 
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
 plugins:
   - search:
       separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
@@ -48,6 +52,9 @@ markdown_extensions:
   - tables
   - toc:
       permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+      smart_dollar: true
   - pymdownx.details
   - pymdownx.superfences
   - pymdownx.highlight
