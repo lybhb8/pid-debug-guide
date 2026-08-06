@@ -2523,31 +2523,31 @@
 <p>热烘箱空箱预热，最大加热功率，从室温到设定温度（140℃）所需时间。</p>
 </li>
 <li>
-<p>热烘箱空箱预热，70% 加热功率，从室温到设定温度（ $( 1 4 0 ^ { \circ } \mathsf { C } )$ 所需时间。</p>
+<p>热烘箱空箱预热，70% 加热功率，从室温到设定温度（ <span class="arithmatex">\(( 1 4 0 ^ { \circ } \mathsf { C } )\)</span> 所需时间。</p>
 </li>
 <li>
 <p>热烘箱空箱已预热（140℃），烘干 60kg 胡萝卜所需排湿时间及次数</p>
 </li>
 <li>
-<p>热烘箱空箱已预热（ $( 1 4 0 ^ { \circ } \mathsf { C } )$ ，烘干 60kg 西红柿所需排湿时间及次数</p>
+<p>热烘箱空箱已预热（ <span class="arithmatex">\(( 1 4 0 ^ { \circ } \mathsf { C } )\)</span> ，烘干 60kg 西红柿所需排湿时间及次数</p>
 </li>
 <li>
-<p>热烘箱空箱已预热（ $. 1 4 0 ^ { \circ } \mathsf { C } )$ ，烘干 60kg 胡萝卜重新升温至 $1 3 0 ^ { \circ } \mathsf C .$ 所需时间（80%加热功率）</p>
+<p>热烘箱空箱已预热（ <span class="arithmatex">\(. 1 4 0 ^ { \circ } \mathsf { C } )\)</span> ，烘干 60kg 胡萝卜重新升温至 <span class="arithmatex">\(1 3 0 ^ { \circ } \mathsf C .\)</span> 所需时间（80%加热功率）</p>
 </li>
 <li>
-<p>热烘箱空箱已预热（140℃），烘干 60kg 西红柿重新升温至 $1 3 0 ^ { \circ } \mathsf C .$ 所需时间（80%加热功率）</p>
+<p>热烘箱空箱已预热（140℃），烘干 60kg 西红柿重新升温至 <span class="arithmatex">\(1 3 0 ^ { \circ } \mathsf C .\)</span> 所需时间（80%加热功率）</p>
 </li>
 <li>
-<p>热烘箱空箱已预热 $( 1 4 0 ^ { \circ } \mathsf { C } )$ ，烘干 60kg 胡萝卜重新升温至 $1 3 0 \%$ 所需时间（100%加热功率）</p>
+<p>热烘箱空箱已预热 <span class="arithmatex">\(( 1 4 0 ^ { \circ } \mathsf { C } )\)</span> ，烘干 60kg 胡萝卜重新升温至 <span class="arithmatex">\(1 3 0 \%\)</span> 所需时间（100%加热功率）</p>
 </li>
 <li>
-<p>热烘箱空箱已预热（ $( 1 4 0 ^ { \circ } \mathsf { C } )$ ，烘干 60kg 西红柿重新升温至 $1 3 0 ^ { \circ } \mathsf C .$ 所需时间（100%加热功率）</p>
+<p>热烘箱空箱已预热（ <span class="arithmatex">\(( 1 4 0 ^ { \circ } \mathsf { C } )\)</span> ，烘干 60kg 西红柿重新升温至 <span class="arithmatex">\(1 3 0 ^ { \circ } \mathsf C .\)</span> 所需时间（100%加热功率）</p>
 </li>
 <li>
 <p>……</p>
 </li>
 </ol>
-<p>重点：通过对以上工况的不同测试，可以优化系统的控制特性，提前进行预判，控制加热器及排风电机，先将系统稳定在合适的工作状态，例如 $1 3 0 \%$ ，再投入 PID控制策略，并选定不同的 PID 参数，保证烘干过程的快速，节能，产品品质等需求。</p>
+<p>重点：通过对以上工况的不同测试，可以优化系统的控制特性，提前进行预判，控制加热器及排风电机，先将系统稳定在合适的工作状态，例如 <span class="arithmatex">\(1 3 0 \%\)</span> ，再投入 PID控制策略，并选定不同的 PID 参数，保证烘干过程的快速，节能，产品品质等需求。</p>
 <h4 id="122">1.2.2 确认工艺系统的安全边界<a class="headerlink" href="#122" title="Permanent link">&para;</a></h4>
 <p>控制系统的安全边界是指一系列预先设定的参数范围，这些参数范围用于确保系统能够安全、稳定、高效地运行。当系统运行参数接近或超出这些边界时，控制系统会采取相应的措施进行调整或报警，以防止设备损坏、控制故障或其他安全事故的发生。</p>
 <p>例子 1：恒压供水系统</p>
@@ -2612,9 +2612,9 @@
 <p>关于 PID理论的资料非常多，本文不做赘述，用户可自行查阅，此处仅讨论本文相关的基础PID公式及方法。</p>
 <h3 id="21-pid">2.1 本文基于的 PID 公式<a class="headerlink" href="#21-pid" title="Permanent link">&para;</a></h3>
 <p>最常见的 PID 公式，理想型 PID 公式：</p>
-<p>$$
+<div class="arithmatex">\[
 u (t) = K p [ e (t) + \frac {1}{T _ {i}} \int_ {0} ^ {t} e (t) d t + T _ {d} \frac {d e (t)}{d t} ]
-$$</p>
+\]</div>
 <p>相关说明：</p>
 <p>e(t)=Psetpoint-Pv ：差值（国内大部分资料都称此值为误差或偏差，其实严格来讲，不符合误差的定义，使用差值一词更合适）</p>
 <p>Psetpoint: 设定值</p>
@@ -2628,17 +2628,17 @@ $$</p>
 <p>注意 1：一个常见的错误就是，大家讨论 PID， 但又基于不同的公式，只看数值，不看定义，例如：把 Ti=3（积分时间），和 Ki=3 （积分系数）混淆，实际上两者之间的对应关系为：Ki=1/T注意 2：</p>
 <p>本文所提及的 Kp,Ti,Td，都严格基于 PID 理想型公式，而不引用其它方式，例如： Ki 积分系数，Kd 微分系数等概念，如果期望使用其它类型的公式，请根据不同公式定义的格式，自行转换。</p>
 <p>相对于经典的 PID 公式，计算机或 PLC 更多的是使用增量 PID离散算法：</p>
-<p>$$
-\begin{array}{l} {u _ {(k)} = k _ {p} (e r r _ {(k)} + k _ {i} \sum e r r _ {(j)} + k _ {d} (e r r _ {(k)} - e r r _ {(k - 1)})) ^ {\psi}} \ {\Delta u _ {(k)} = k _ {p} (e r r _ {(k)} - e r r _ {(k - 1)}) + k _ {i} e r r _ {(k)} + k _ {d} (e r r _ {(k)} - 2 e r r _ {(k - 1)} + e r r _ {(k - 2)}) ^ {\psi}} \end{array}
-$$</p>
-<p>注意 3：对于理想型 PID 公式，由于比例分量，积分分量，微分分量，都最终会乘以 $\mathsf { K p } ,$ 这样会造成积分分量和微分分量与 $\mathsf { K p }$ 的强耦合关系，不利于对每个分量概念的分析与理解，所以本文附带的 PID 理论仿真工具，实际上的公式为：</p>
-<p>$$
+<div class="arithmatex">\[
+\begin{array}{l} {u _ {(k)} = k _ {p} (e r r _ {(k)} + k _ {i} \sum e r r _ {(j)} + k _ {d} (e r r _ {(k)} - e r r _ {(k - 1)})) ^ {\psi}} \\ {\Delta u _ {(k)} = k _ {p} (e r r _ {(k)} - e r r _ {(k - 1)}) + k _ {i} e r r _ {(k)} + k _ {d} (e r r _ {(k)} - 2 e r r _ {(k - 1)} + e r r _ {(k - 2)}) ^ {\psi}} \end{array}
+\]</div>
+<p>注意 3：对于理想型 PID 公式，由于比例分量，积分分量，微分分量，都最终会乘以 <span class="arithmatex">\(\mathsf { K p } ,\)</span> 这样会造成积分分量和微分分量与 <span class="arithmatex">\(\mathsf { K p }\)</span> 的强耦合关系，不利于对每个分量概念的分析与理解，所以本文附带的 PID 理论仿真工具，实际上的公式为：</p>
+<div class="arithmatex">\[
 u (t) = K p e (t) + \frac {1}{T i} \int_ {0} ^ {t} e (t) d t + T d \frac {d e (t)}{d t}
-$$</p>
+\]</div>
 <p>调整Ti，及 Td 时,免除了Kp 系数的影响。</p>
 <h3 id="22-pid">2.2 PID 参数解读<a class="headerlink" href="#22-pid" title="Permanent link">&para;</a></h3>
 <h4 id="221-p">2.2.1 P 参数解读<a class="headerlink" href="#221-p" title="Permanent link">&para;</a></h4>
-<p>在本文附带的 PID 特性模拟工具中，可以通过对不同参数的调整，来理解 PID中各个分量对PID输出的贡献，例如当设置参数为： $\mathsf { P s e t p o i n t : } = 0 . 8 , ~ \mathsf { K p } = 1 . 2 9 , ~ \mathsf { P } = \mathsf { K p } ^ { \star } \mathsf { e }$ ，如图 1 所示，当设定值为 0.8（80%），过程变量 $\mathsf { P v }$ （深红色曲线）变化时，其与设定值 Psetpoint（蓝色直线）的差值为 e(绿色曲线)，P 分量(紫色曲线) $\mathsf { \Pi } = \mathsf { e } ^ { \star } \mathsf { K } \mathsf { p }$ o</p>
+<p>在本文附带的 PID 特性模拟工具中，可以通过对不同参数的调整，来理解 PID中各个分量对PID输出的贡献，例如当设置参数为： <span class="arithmatex">\(\mathsf { P s e t p o i n t : } = 0 . 8 , ~ \mathsf { K p } = 1 . 2 9 , ~ \mathsf { P } = \mathsf { K p } ^ { \star } \mathsf { e }\)</span> ，如图 1 所示，当设定值为 0.8（80%），过程变量 <span class="arithmatex">\(\mathsf { P v }\)</span> （深红色曲线）变化时，其与设定值 Psetpoint（蓝色直线）的差值为 e(绿色曲线)，P 分量(紫色曲线) <span class="arithmatex">\(\mathsf { \Pi } = \mathsf { e } ^ { \star } \mathsf { K } \mathsf { p }\)</span> o</p>
 <p><img alt="" src="images/e538c32a3382f9d724a74ebcb8590ffb68939a5fe5a9346cab96807a3725a157.jpg" /></p>
 <p>图 1 P 分量曲线</p>
 <h4 id="222-i">2.2.2 I 参数解读<a class="headerlink" href="#222-i" title="Permanent link">&para;</a></h4>
@@ -2699,9 +2699,9 @@ $$</p>
 <p><img alt="" src="images/3aea7262b84287c880fe85938cdf0f18ab5a117135158a2f4acaec1d49c61fef.jpg" /><br />
 图 9 参数 τ 及 Tg 的获得</p>
 <p>系统的 PID 参数可以按照如下公式给出：</p>
-<p>$$
-\mathrm{Kp} = 0. 5 3 ^ {<em>} \mathrm{Tg} / \tau \quad \mathrm{Ti} = 4 ^ {</em>} \tau \quad \mathrm{Td} = 0. 8 ^ {*} \tau
-$$</p>
+<div class="arithmatex">\[
+\mathrm{Kp} = 0. 5 3 ^ {*} \mathrm{Tg} / \tau \quad \mathrm{Ti} = 4 ^ {*} \tau \quad \mathrm{Td} = 0. 8 ^ {*} \tau
+\]</div>
 <p>初步得到的 PID 参数 Kp=2.12，Ti=12，Td=3.2</p>
 <p>在此基础上，工程师可以根据实际系统特性，自行尝试修改 PID参数，得到自己需要的结果。</p>
 <h4 id="233">2.3.3 对阶跃响应整定方法错误认识<a class="headerlink" href="#233" title="Permanent link">&para;</a></h4>
@@ -2732,16 +2732,16 @@ $$</p>
 <h3 id="24-pid">2.4 是否可以使用PID：重要的参数λ<a class="headerlink" href="#24-pid" title="Permanent link">&para;</a></h3>
 <p>前面的章节提出了系统的两个重要参数：</p>
 <p>τ ：系统延迟时间 Tg: 系统恢复时间，</p>
-<p>而这两个参数的比值 $\lambda { = } \tau / \top \mathfrak { g }$ ，是 PID系统的一个重要特性参数，一般来讲，</p>
+<p>而这两个参数的比值 <span class="arithmatex">\(\lambda { = } \tau / \top \mathfrak { g }\)</span> ，是 PID系统的一个重要特性参数，一般来讲，</p>
 <ol>
 <li>
-<p>$0 &lt; \lambda &lt; &lt; 1$ , 系统滞后性非常小，PID控制起来会很容易，参数可以变化的范围非常大</p>
+<p><span class="arithmatex">\(0 &lt; \lambda &lt; &lt; 1\)</span> , 系统滞后性非常小，PID控制起来会很容易，参数可以变化的范围非常大</p>
 </li>
 <li>
-<p>$0 { &lt; } \lambda { &lt; } 1$ , 系统具有滞后性，PID控制需要调试，参数可以变化的范围不大</p>
+<p><span class="arithmatex">\(0 { &lt; } \lambda { &lt; } 1\)</span> , 系统具有滞后性，PID控制需要调试，参数可以变化的范围不大</p>
 </li>
 <li>
-<p>$\lambda { &gt; } 1$ , 大滞后系统，PID调节困难</p>
+<p><span class="arithmatex">\(\lambda { &gt; } 1\)</span> , 大滞后系统，PID调节困难</p>
 </li>
 <li>
 <p>λ&gt;&gt;1, 超大滞后系统，不要使用 PID控制方法</p>
@@ -2787,35 +2787,35 @@ $$</p>
 </li>
 </ol>
 <p>其它手动需求 PID参数或整定的方法有很多，例如等幅振荡法，&frac14;振荡法，1/10振荡法等等，当然用户也可以使用最原始的参数尝试的方法(Ti=非常大的数值，Td=0，Kp从非常小的数值开始，尝试，逐渐给大，在系统有振荡的趋势后，再改小 Ti参数，Td 逐步增大，直至略有超调…)，从作者的角度来看，可以结合此原始方法，并给出 PID参数手动调整的改良方法。</p>
-<p>首先讨论一下等幅振荡法 $\scriptstyle ( 1 \times \mathsf { p } = 7 , \mathsf { T i } = 9 9 9 9 , \mathsf { T d } = 0 )$ ，在纯比例控制的情况下，系统图形如下：</p>
+<p>首先讨论一下等幅振荡法 <span class="arithmatex">\(\scriptstyle ( 1 \times \mathsf { p } = 7 , \mathsf { T i } = 9 9 9 9 , \mathsf { T d } = 0 )\)</span> ，在纯比例控制的情况下，系统图形如下：</p>
 <p><img alt="" src="images/6cfa7819fc4ea1045d880a0157865f613d9c0c74d5fc7cb3f4608accbedf8eb9.jpg" /><br />
 图 15 等幅振荡法 PID 系统曲线</p>
 <p>从图中可以看出，过程值接近等幅振荡，但此时系统的输出值也在做大幅度的振荡，在很多实际系统中此情况受制于系统的工艺特性和物理特性，是不被允许的！</p>
-<p>其次讨论一下 &frac14;振荡法（包括类似的 1/10振荡法），此系统参数 $\scriptstyle ( 1 \land p = 4 , T \land = 9 9 9 9$ Td=0），在纯比例控制的情况下，系统图形如下：</p>
+<p>其次讨论一下 &frac14;振荡法（包括类似的 1/10振荡法），此系统参数 <span class="arithmatex">\(\scriptstyle ( 1 \land p = 4 , T \land = 9 9 9 9\)</span> Td=0），在纯比例控制的情况下，系统图形如下：</p>
 <p><img alt="" src="images/5c00abce6de69dea8362220b708fba130e5fc1fc3e8307ebec17844691c9b5f0.jpg" /></p>
 <p>图 16 &frac14; 振荡法 PID 系统曲线</p>
 <p>从图中可以看出，过程值的第二个波峰，接近于第一个波峰的 &frac14;值，但系统的输出值也存在较大幅幅度的振荡，而两个波峰幅值比为 &frac14;，也难以精准掌控，再通过经验公式，得到相关的 PID参数大概率存在较大偏差。</p>
-<p>无论是通过图 8，还是 图 16，可能都会得到一个初步的 PID参数，例如： $\ K _ { \mathsf { P } } { = } 2 . 1 2$ Ti=12，Td=3.2，那么这个参数如何调整呢？</p>
-<p>下面介绍一下，PID参数手动调节的方法：取消积分，微分作用（Ti=9999，Td=0），查看$\mathsf { K p }$ 的上限值，先写入 $K _ { \mathsf { P } } { = } 2 . 1 2 ,$</p>
+<p>无论是通过图 8，还是 图 16，可能都会得到一个初步的 PID参数，例如： <span class="arithmatex">\(\ K _ { \mathsf { P } } { = } 2 . 1 2\)</span> Ti=12，Td=3.2，那么这个参数如何调整呢？</p>
+<p>下面介绍一下，PID参数手动调节的方法：取消积分，微分作用（Ti=9999，Td=0），查看<span class="arithmatex">\(\mathsf { K p }\)</span> 的上限值，先写入 <span class="arithmatex">\(K _ { \mathsf { P } } { = } 2 . 1 2 ,\)</span></p>
 <p><img alt="" src="images/251a015692d9232b504f52db4dae0f8590c6dc81f800186591183c517cab842d.jpg" /><br />
 图 17 P 临界阻尼的过程值曲线</p>
 <p>临界阻尼在对控制精度和稳定性要求都很高的场合非常重要。比如在高精度的数控机床的位置控制中，刀具需要精确地移动到指定位置，任何超调或者振荡都可能导致加工精度下降。通过调整 PID 参数使系统处于临界阻尼状态，可以确保刀具快速且准确地定位，提高加工质量。</p>
-<p>此时的 Pv值已经接近临界阻尼状态，略有波峰出现，说明此时的 $\mathsf { K p }$ 已经为上限值，不可以再增大，下图中 $\ K p { = } 3 ,$ , 为不可取数值</p>
+<p>此时的 Pv值已经接近临界阻尼状态，略有波峰出现，说明此时的 <span class="arithmatex">\(\mathsf { K p }\)</span> 已经为上限值，不可以再增大，下图中 <span class="arithmatex">\(\ K p { = } 3 ,\)</span> , 为不可取数值</p>
 <p><img alt="" src="images/d00e0b165ee3560a920366b6f8207feccd8c87ab8de65f21ada5fbe692ddb88a.jpg" /><br />
 图 18 P 欠阻尼的过程值曲线</p>
 <p>在一些对响应速度要求较高的系统中，适当的欠阻尼是可以接受的。例如，在某些快速响应的电机控制系统中，允许一定程度的振荡可以使电机更快地达到新的转速设定值。但是，需要注意控制欠阻尼的程度，因为过度的振荡可能会导致系统不稳定、增加能量损耗或者损坏设备。通常可以通过观察阶跃响应曲线的振荡幅度和振荡周期，调整 PID 参数来控制欠阻尼程度，使其在满足响应速度需求的同时，尽量减小振荡对系统的不利影响。</p>
 <p>取消积分，微分作用（Ti=9999，Td=0），查看 Kp的下限值，逐步按照 20%减小 Kp值，直到过程值略有上升，逐渐平直，过阻尼状态，此处可以得到 Kp下限值为大于 1.5。</p>
 <p><img alt="" src="images/00254b2a39da85332bcadcc6689b40657bea7e051d092cdc3c46990d02361628.jpg" /><br />
 图 19 P 过阻尼的过程值曲线</p>
-<p>最终在常见工况下，我们选定 $\mathsf { K p } { = } 2 . 0$ ，然后再输入之前的 Ti=12，Td=0,如图 20，此时的Pv 值特性偏软，处于过阻尼状态，应该将 Ti 逐渐减小，</p>
+<p>最终在常见工况下，我们选定 <span class="arithmatex">\(\mathsf { K p } { = } 2 . 0\)</span> ，然后再输入之前的 Ti=12，Td=0,如图 20，此时的Pv 值特性偏软，处于过阻尼状态，应该将 Ti 逐渐减小，</p>
 <p><img alt="" src="images/f42834cd656227c85c38c1ab90924ac0cc3b6887b51b980c0624daf56cb7a39e.jpg" /><br />
 图 20 PI过阻尼的过程值曲线</p>
 <p>过阻尼在一些对稳定性要求极高、对响应速度要求不高的场合可能会被采用。例如，在一些大型储液罐的液位控制中，为了避免液位波动过大对罐体结构造成损害，可能会允许系统以较慢的速度进行调整，采用过阻尼控制。但是，在大多数实际应用中，过阻尼的响应速度过慢可能无法满足生产效率等要求，所以通常需要适当调整 PID 参数来避免系统处于过阻尼状态。</p>
 <p><img alt="" src="images/50ab0132e1ea0c233f7e329bb167d1adba3c1cd2f110a59095e856f52f65b3ba.jpg" /><br />
 图 21 PI 接近临界阻尼的过程值曲线</p>
 <p>最终 Ti=7的时候，接近临界阻尼，并略有尖峰，得到 Ti下限。如果只使用 PI控制，则此时参数范围为 Kp:1.5-2.0, Ti:大于 7， Td=0;</p>
-<p>如果使用 PID 控制，则此时参数范围为 Kp:1.5-2.0, Ti:大于 7， ${ \mathsf { T } } { \mathsf { d } } { = } 1 . 7 5$ （Td的调节方法类似 Ti, 不再赘述）;</p>
-<p>在拥有明确的 PID 参数范围后（Kp:1.5-2.0, Ti:大于 7， Td=0），用 $\dot { \mathsf { H } }$ 可以跟据控制工艺的需求，选择相应的组合，希望响应快，就选择大一些的 $\mathsf { K p , }$ , 小的 Ti；如果希望不超调，就选择小一些的 $\mathsf { K p , }$ 大一些的 $\bar { \mathsf { I i } } _ { \circ }$ 。如图 22 中的参数为： $K _ { P } = 2 . 0 , T _ { 1 } = 9$ $\uparrow { \mathsf { d } } { = } 2$</p>
+<p>如果使用 PID 控制，则此时参数范围为 Kp:1.5-2.0, Ti:大于 7， <span class="arithmatex">\({ \mathsf { T } } { \mathsf { d } } { = } 1 . 7 5\)</span> （Td的调节方法类似 Ti, 不再赘述）;</p>
+<p>在拥有明确的 PID 参数范围后（Kp:1.5-2.0, Ti:大于 7， Td=0），用 <span class="arithmatex">\(\dot { \mathsf { H } }\)</span> 可以跟据控制工艺的需求，选择相应的组合，希望响应快，就选择大一些的 <span class="arithmatex">\(\mathsf { K p , }\)</span> , 小的 Ti；如果希望不超调，就选择小一些的 <span class="arithmatex">\(\mathsf { K p , }\)</span> 大一些的 <span class="arithmatex">\(\bar { \mathsf { I i } } _ { \circ }\)</span> 。如图 22 中的参数为： <span class="arithmatex">\(K _ { P } = 2 . 0 , T _ { 1 } = 9\)</span> <span class="arithmatex">\(\uparrow { \mathsf { d } } { = } 2\)</span></p>
 <p><img alt="" src="images/cf158ee15f36929145c6282ed13581ac307b4016f49de101e62ffd508fd31e97.jpg" /><br />
 图 22 根据工况择优的 PID 参数曲线</p>
 <h3 id="26-pid">2.6 PID继电器振荡自整定<a class="headerlink" href="#26-pid" title="Permanent link">&para;</a></h3>
@@ -2873,16 +2873,16 @@ $$</p>
 <h4 id="312">3.1.2 第一步：共同的理论基础，统一参照的公式<a class="headerlink" href="#312" title="Permanent link">&para;</a></h4>
 <p>虽然在之前的 2.1 章节，已经明确了本文的 PID理论公式基础，但此处再次强调一下理论基础，否则很多工程实际问题将会失去讨论的基础：</p>
 <p>本文基于理想型 PID公式对 PID展开讨论，即</p>
-<p>$$
+<div class="arithmatex">\[
 u (t) = K p [ e (t) + \frac {1}{T _ {i}} \int_ {0} ^ {t} e (t) d t + T _ {d} \frac {d e (t)}{d t} ]
-$$</p>
+\]</div>
 <p>如果用户习惯使用如下公式，则相关对应关系为：</p>
-<p>$$
+<div class="arithmatex">\[
 u (t) = K p e (t) + K i \int_ {0} ^ {t} e (t) d t + K d \frac {d e (t)}{d t}
-$$</p>
-<p>$$
+\]</div>
+<div class="arithmatex">\[
 \mathrm{Ki} = \mathrm{Kp} / \mathrm{Ti}, \mathrm{Kd} = \mathrm{Kp} ^ {*} \mathrm{Td},
-$$</p>
+\]</div>
 <p>注意：本文统一讨论 Kp, 积分时间 Ti，微分时间 Td, 而不是 Ki，Kd。</p>
 <h4 id="313-pid">3.1.3 第二步：同一个PID，归一化处理<a class="headerlink" href="#313-pid" title="Permanent link">&para;</a></h4>
 <p>在所有的 PID理论资料中，有如下特点：</p>
@@ -3324,6 +3324,10 @@ $$</p>
     
     
       <script src="assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>
