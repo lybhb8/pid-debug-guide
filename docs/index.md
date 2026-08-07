@@ -2,7 +2,7 @@ SIEMENS Ingenuity for life
 
 # PID工程调试指南
 
-https://support.industry.siemens.com/cs/cn/zh/view/109978710
+[原文](https://support.industry.siemens.com/cs/cn/zh/view/109978710)
 
 
 ## 1. PID控制系统调试前期准备工作
@@ -546,7 +546,7 @@ $$
 
 3. 输出作用基本都是“正作用”，即输出值的变大会导致过程值的变大而工程调试当中，往往更强调实际的工程量纲，有如下特点：
 
-1. 设定值，过程值都是工程常量，Mpa, ℃,�3/�,N, lm
+1. 设定值，过程值都是工程常量，Mpa, ℃,𝑚^3/𝑠,N, lm 
 
 2. 输出值和设定值，过程值往往不是同样的量纲，可能是阀门开度%，电流安培，继电器 PWM 百分比
 
@@ -1006,29 +1006,19 @@ SIMATIC S7-200 SMART 系统手册 V2.8, 08/2023 (A5E03822234-AI)
 
 相关参考网站：
 
-SIMATIC S7-1200, S7-1500 PID 控制
+- [SIMATIC S7-1200, S7-1500 PID 控制](https://support.industry.siemens.com/cs/cn/zh/view/108210036)
 
-https://support.industry.siemens.com/cs/cn/zh/view/108210036
+- PID Compact V2 版本 S7-1200 PID 使用
 
-PID Compact V2 版本 S7-1200 PID 使用
+    [PID Compact V2 版本](https://www.ad.siemens.com.cn/productportal/prods/s7-1200_plc_easy_plus/smartsms/1000.html)
 
-PID Compact V2 版本
+- [S7-200 SMART 官网](https://w2.siemens.com.cn/smart/)
 
-S7-200 SMART 官网
+- [PID常见问题](https://www.ad.siemens.com.cn/productportal/prods/s7-200-smartportal/200smarttop/function/PID/PID\_FAQ.html)
 
-https://w2.siemens.com.cn/smart/
+- [以前版本的 PID自整定与调试面板](https://www.ad.siemens.com.cn/productportal/prods/s7-200-smartportal/200smarttop/function/PID/PID\_AUTO.html)
 
-PID常见问题
-
-https://www.ad.siemens.com.cn/productportal/prods/s7-200-smartportal/200smarttop/function/PID/PID\_FAQ.html
-
-以前版本的 PID自整定与调试面板
-
-https://www.ad.siemens.com.cn/productportal/prods/s7-200-smartportal/200smarttop/function/PID/PID\_AUTO.html
-
-PID 自动/手动调节的无扰动切换
-
-https://www.ad.siemens.com.cn/productportal/prods/s7-200-smartportal/200smarttop/function/PID/PID\_AUTO\_MANUAL.html
+- [PID 自动/手动调节的无扰动切换](https://www.ad.siemens.com.cn/productportal/prods/s7-200-smartportal/200smarttop/function/PID/PID\_AUTO\_MANUAL.html)
 
 ## 8. 更新日志
 
